@@ -21,7 +21,8 @@
     "morgan": "^1.5.3",
     "serve-favicon": "^2.2.1",
     "swig": "~1.3.2",
-    "underscore": "~1.6.0"
+    "underscore": "~1.6.0",
+    "snyk": "^1.30.1"
   },
   "devDependencies": {
     "mocha": "~1.18.2",
@@ -31,7 +32,10 @@
   "license": "MIT",
   "scripts": {
     "start": "node app",
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
-  "main": "./middleware"
+  "main": "./middleware",
+  "snyk": true
 }
